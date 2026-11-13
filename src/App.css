@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #202020;
+  background: #f4f4f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button, a { font: inherit; }
+a { color: inherit; }
+
+.page-shell {
+  min-height: 100vh;
+  padding: 0 34px 34px;
+  background:
+    radial-gradient(circle at 92% 2%, rgba(0, 0, 0, 0.035), transparent 23rem),
+    #f4f4f3;
+}
+
+.dashboard {
+  width: min(100%, 1360px);
+  margin: 0 auto;
+}
+
+.topbar {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e2e0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #202020;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.brand-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.15px;
+}
+
+.brand-name span {
+  color: #929292;
+  font-weight: 600;
+}
+
+.topbar-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #777;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.status-dot, .clock-indicator, .data-badge span {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #777;
+}
+
+.welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 54px 0 48px;
+}
+
+.eyebrow {
+  margin: 0 0 11px;
+  color: #898989;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.65px;
+}
+
+h1, h2, p { margin-top: 0; }
+
+h1, h2 {
+  font-family: 'Manrope', sans-serif;
+  color: #202020;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(29px, 4vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1.8px;
+  line-height: 1.15;
+}
+
+.page-description, .section-description {
+  margin-bottom: 0;
+  color: #858585;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.clock-card {
+  width: 258px;
+  flex: 0 0 258px;
+  padding: 17px 20px 16px;
+  border-radius: 13px;
+  background: #202020;
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+}
+
+.clock-topline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b8b8b8;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+}
+
+.clock-indicator { background: #d1d1d1; }
+
+.timezone {
+  margin-left: auto;
+  padding: 4px 6px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #dedede;
+  font-size: 9px;
+}
+
+.clock-time {
+  margin: 12px 0 3px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+}
+
+.clock-date {
+  margin: 0;
+  color: #a7a7a7;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.content-section { padding-bottom: 42px; }
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 21px;
+}
+
+.section-heading .eyebrow { margin-bottom: 7px; }
+
+h2 {
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.section-description { font-size: 12px; }
+
+.student-count {
+  min-width: 156px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  border: 1px solid #e1e1df;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.count-number {
+  font-family: 'Manrope', sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.count-label {
+  max-width: 70px;
+  color: #888;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.8px;
+}
+
+.table-card {
+  overflow: hidden;
+  border: 1px solid #e6e6e4;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.025);
+}
+
+.table-toolbar {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 22px;
+  border-bottom: 1px solid #ededeb;
+}
+
+.table-title-wrap { display: flex; flex-direction: column; gap: 4px; }
+.table-title { font-size: 12px; font-weight: 700; }
+.table-subtitle { color: #999; font-size: 10px; }
+
+.data-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 9px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  color: #777;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.65px;
+  white-space: nowrap;
+}
+
+.data-badge span { width: 6px; height: 6px; background: #777; }
+
+.table-scroll { width: 100%; overflow-x: auto; }
+table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead { background: #f8f8f7; }
+th {
+  padding: 14px 15px;
+  color: #858585;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+td {
+  padding: 13px 15px;
+  border-top: 1px solid #f0f0ee;
+  color: #484848;
+  font-size: 11px;
+  white-space: nowrap;
+}
+tbody tr { transition: background 150ms ease; }
+tbody tr:hover { background: #fafafa; }
+
+th:first-child, td:first-child { padding-left: 22px; }
+th:last-child, td:last-child { padding-right: 22px; }
+.nim-cell { color: #333; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.student-name-cell { display: flex; align-items: center; gap: 9px; }
+.avatar {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  flex: 0 0 27px;
+  place-items: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: #f1f1f0;
+  color: #555;
+  font-size: 9px;
+  font-weight: 700;
+}
+.student-name { color: #292929; font-weight: 600; }
+.muted-cell { color: #777; font-variant-numeric: tabular-nums; }
+.email-link { color: #555; text-decoration: none; }
+.email-link:hover { color: #111; text-decoration: underline; }
+
+.program-tag {
+  display: inline-block;
+  padding: 5px 8px;
+  border: 1px solid #e9e9e8;
+  border-radius: 5px;
+  background: #fafafa;
+  color: #666;
+  font-size: 10px;
+}
+
+.year-cell {
+  display: inline-block;
+  min-width: 42px;
+  padding: 5px 7px;
+  border-radius: 5px;
+  background: #f2f2f1;
+  color: #555;
+  font-size: 10px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.table-footer {
+  min-height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 22px;
+  border-top: 1px solid #ededeb;
+  color: #929292;
+  font-size: 10px;
+}
+.table-footer strong { color: #555; font-weight: 700; }
+.footer-note { font-size: 9px; letter-spacing: 1px; }
+
+.page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 0 0;
+  border-top: 1px solid #e2e2e0;
+  color: #999;
+  font-size: 10px;
+}
+.footer-separator { padding: 0 4px; color: #c0c0c0; }
+
+@media (max-width: 760px) {
+  .page-shell { padding: 0 18px 24px; }
+  .topbar { min-height: 70px; }
+  .topbar-note { font-size: 8px; letter-spacing: 0.8px; }
+  .welcome-section { align-items: stretch; flex-direction: column; padding: 38px 0 35px; gap: 22px; }
+  .clock-card { width: 100%; flex-basis: auto; }
+  .clock-time { font-size: 27px; }
+  .section-heading { align-items: flex-start; }
+  .student-count { min-width: 112px; gap: 8px; padding: 8px 10px; }
+  .count-number { font-size: 23px; }
+  .count-label { font-size: 8px; }
+  .table-toolbar { padding: 0 15px; }
+  .table-footer { padding: 0 15px; }
+  .footer-note { display: none; }
+  .page-footer { align-items: flex-start; flex-direction: column; gap: 7px; }
+}
+
+@media (max-width: 420px) {
+  .brand-name { font-size: 10px; }
+  .section-heading { flex-direction: column; }
+  .student-count { min-width: 145px; }
+  h1 { font-size: 31px; }
+}
